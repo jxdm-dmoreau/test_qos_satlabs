@@ -1,0 +1,9 @@
+#!/usr/bin/perl -w
+#
+
+while(<STDIN>) {
+	my $div = $_/16;
+	print STDOUT "$div\n";
+}
+
+

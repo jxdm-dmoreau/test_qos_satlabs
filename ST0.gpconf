@@ -1,0 +1,22 @@
+set term png
+set output 'ST0.png'
+set size 1,1
+set autoscale
+set grid
+set xrange [210:230]
+set multiplot
+
+set size 1,0.5
+set origin 0,0.5
+set title "Best-Effort"
+set xlabel 'frame'
+set ylabel 'ATM cells'
+plot 'data/ST0_RBE.data' title 'Requests' with linespoints, 'data/ST0_SBE.data' title 'BackLog' with linespoints
+
+set origin 0,0
+set title "Total Served by RLC"
+set xlabel 'frame'
+set ylabel 'kbps'
+plot 'data/ST0_S.data' title 'Served' with linespoints
+
+
